@@ -7,4 +7,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Examples\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\src\ElPi.Interpreter\ElPi.Interpreter.csproj" />
+  </ItemGroup>
+
 </Project>
