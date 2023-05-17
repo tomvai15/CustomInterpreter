@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomInterpreter", "CustomInterpreter\CustomInterpreter.csproj", "{F9066400-A452-40E2-B194-9AA390963CE2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElPi.Interpreter", "src\ElPi.Interpreter\ElPi.Interpreter.csproj", "{665C5F61-0323-4C27-A693-FEE015C21A4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElPi.App", "ElPi.App\ElPi.App.csproj", "{675430CD-29B4-401F-801C-18B14D9E9888}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9066400-A452-40E2-B194-9AA390963CE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9066400-A452-40E2-B194-9AA390963CE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9066400-A452-40E2-B194-9AA390963CE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9066400-A452-40E2-B194-9AA390963CE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
