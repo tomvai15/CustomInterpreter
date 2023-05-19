@@ -22,10 +22,14 @@ namespace ElPi.App
             }
 
 
-            IScanner scanner = new Scanner();
+            var scanner = new Scanner(code);
 
-            scanner.Scan(code);
+            var tokens = scanner.ScanTokens();
+
+            return;
             
         }
+
+
     }
 }
