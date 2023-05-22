@@ -2,11 +2,6 @@
 using ElPi.Interpreter.Expressions;
 using ElPi.Interpreter.Visitors;
 using FluentAssertions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ElPi.UnitTests.Interpreter.Visitor
 {

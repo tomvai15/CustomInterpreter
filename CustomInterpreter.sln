@@ -5,7 +5,7 @@ VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElPi.Interpreter", "src\ElPi.Interpreter\ElPi.Interpreter.csproj", "{665C5F61-0323-4C27-A693-FEE015C21A4B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElPi.App", "ElPi.App\ElPi.App.csproj", "{675430CD-29B4-401F-801C-18B14D9E9888}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElPi.App", "src\ElPi.App\ElPi.App.csproj", "{675430CD-29B4-401F-801C-18B14D9E9888}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FDD52175-20F4-47E8-9F71-009F81BE83D6}"
 EndProject
