@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElPi.Interpreter", "src\ElPi.Interpreter\ElPi.Interpreter.csproj", "{665C5F61-0323-4C27-A693-FEE015C21A4B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ElPi.App", "ElPi.App\ElPi.App.csproj", "{675430CD-29B4-401F-801C-18B14D9E9888}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FDD52175-20F4-47E8-9F71-009F81BE83D6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{2F34B999-F8A1-4482-8FBD-6AB98DA74335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ElPi.UnitTests", "tests\ElPi.UnitTests\ElPi.UnitTests.csproj", "{CA898ECB-7611-41A7-9145-EED71C2E37A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{665C5F61-0323-4C27-A693-FEE015C21A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{675430CD-29B4-401F-801C-18B14D9E9888}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA898ECB-7611-41A7-9145-EED71C2E37A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA898ECB-7611-41A7-9145-EED71C2E37A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA898ECB-7611-41A7-9145-EED71C2E37A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA898ECB-7611-41A7-9145-EED71C2E37A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{665C5F61-0323-4C27-A693-FEE015C21A4B} = {FDD52175-20F4-47E8-9F71-009F81BE83D6}
+		{675430CD-29B4-401F-801C-18B14D9E9888} = {FDD52175-20F4-47E8-9F71-009F81BE83D6}
+		{CA898ECB-7611-41A7-9145-EED71C2E37A1} = {2F34B999-F8A1-4482-8FBD-6AB98DA74335}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72BAF8C6-2912-4D7D-ADDE-0F57FCDD2B89}
+	EndGlobalSection
+EndGlobal
