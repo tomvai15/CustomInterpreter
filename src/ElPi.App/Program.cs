@@ -1,4 +1,5 @@
 ﻿using ElPi.Interpreter;
+using ElPi.Interpreter.Visitors;
 
 namespace ElPi.App
 {
@@ -25,6 +26,14 @@ namespace ElPi.App
             var scanner = new Scanner(code);
 
             var tokens = scanner.ScanTokens();
+
+            var parser = new Parser(tokens);
+
+            var expression =  parser.Parse();
+
+            var printer = new AstPrinter();
+
+            Console.WriteLine(printer.Print(expression));
 
             return;
             

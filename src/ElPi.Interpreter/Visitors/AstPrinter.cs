@@ -5,6 +5,11 @@ namespace ElPi.Interpreter.Visitors
 {
     public class AstPrinter : IExpressionVisitor<string>
     {
+        public string Print(Expression expr)
+        {
+            return expr.Accept(this);
+        }
+
         public string VisitBinaryExpr(Binary binaryExpression)
         {
             return Parenthesize(binaryExpression.Operator.Lexeme, binaryExpression.Left, binaryExpression.Right);
