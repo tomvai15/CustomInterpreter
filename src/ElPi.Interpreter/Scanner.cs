@@ -142,7 +142,7 @@ namespace ElPi.Interpreter
                 Advance();
             }
 
-            string text = Source.Substring(lexemeStart, currentPosition);
+            string text = Source.Cut(lexemeStart, currentPosition);
             bool wasFound = Constants.Keywords.TryGetValue(text, out TokenType type);
             if (!wasFound) { 
                 type = IDENTIFIER; 

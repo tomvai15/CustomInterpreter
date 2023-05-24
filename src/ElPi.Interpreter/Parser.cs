@@ -1,5 +1,6 @@
 ﻿using ElPi.Interpreter.Exceptions;
 using ElPi.Interpreter.Expressions;
+using ElPi.Interpreter.Statements;
 using System;
 using static ElPi.Interpreter.TokenType;
 
@@ -25,6 +26,41 @@ namespace ElPi.Interpreter
             {
                 return null;
             }
+        }
+
+        public List<Statement> ParseStatements()
+        {
+            List<Statement> statements = new List<Statement>();
+
+            while (!IsAtEnd())
+            {
+                statements.Add(CreateStatement());
+            }
+
+            return statements;
+        }
+        private Statement CreateStatement()
+        {
+            if (Match(PRINT)) 
+            {
+                return PrintStatement();
+            }
+
+            return ExpressionStatement();
+        }
+
+        private Statement PrintStatement()
+        {
+            Expression value = CreateExpression();
+            Consume(SEMICOLON, "Expect ';' after value.");
+            return new PrintStatement(value);
+        }
+
+        private Statement ExpressionStatement()
+        {
+            Expression expr = CreateExpression();
+            Consume(SEMICOLON, "Expect ';' after expression.");
+            return new ExpressionStatement(expr);
         }
 
         private Expression CreateExpression()

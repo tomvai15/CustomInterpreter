@@ -1,14 +1,23 @@
 ﻿using ElPi.Interpreter.Exceptions;
 using ElPi.Interpreter.Expressions;
+using ElPi.Interpreter.Statements;
 using static ElPi.Interpreter.TokenType;
 
 namespace ElPi.Interpreter.Visitors
 {
-    public class ExpressionInterpreter : IExpressionVisitor<object>
+    public class ProgramInterpreter : IExpressionVisitor<object>, IStatementVisitor<object>
     {
-        public object Interpret(Expression expression)
+        public void Interpret(List<Statement> statements)
         {
-            return Evaluate(expression);
+            foreach ( var statement in statements)
+            {
+                Execute(statement);
+            }
+        }
+
+        private void Execute(Statement statement)
+        {
+            statement.Accept(this);
         }
 
         public object VisitBinaryExpr(Binary expr)
@@ -103,6 +112,19 @@ namespace ElPi.Interpreter.Visitors
         private object Evaluate(Expression expr)
         {
             return expr.Accept(this);
+        }
+
+        public object VisitPrintStatement(PrintStatement printStatement)
+        {
+            object value = Evaluate(printStatement.Expression);
+            Console.WriteLine(value.ToString());
+            return null;
+        }
+
+        public object VisitExpressionStatement(ExpressionStatement expressionStatement)
+        {
+            Evaluate(expressionStatement.Expression);
+            return null;
         }
     }
 }

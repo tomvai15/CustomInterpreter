@@ -26,16 +26,16 @@ namespace ElPi.App
             var tokens = scanner.ScanTokens();
 
             var parser = new Parser(tokens);
-            var expression =  parser.Parse();
+            var statements =  parser.ParseStatements();
 
-            var printer = new AstPrinter();
-            var expressionTree = printer.Print(expression);
-            Console.WriteLine(expressionTree);
+            //var printer = new AstPrinter();
+            //var expressionTree = printer.Print(expression);
+          //  Console.WriteLine(expressionTree);
 
-            var interpreter = new ExpressionInterpreter();
-            var result  = interpreter.Interpret(expression);
+            var interpreter = new ProgramInterpreter();
+            interpreter.Interpret(statements);
 
-            Console.WriteLine($"Result: {result}");    
+            //Console.WriteLine($"Result: {result}");    
         }
     }
 }
