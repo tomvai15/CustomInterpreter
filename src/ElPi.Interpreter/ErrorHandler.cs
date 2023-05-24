@@ -1,4 +1,6 @@
-﻿namespace ElPi.Interpreter
+﻿using ElPi.Interpreter.Exceptions;
+
+namespace ElPi.Interpreter
 {
     public static class ErrorHandler
     {
@@ -6,6 +8,12 @@
         {
             Report(line, "", message);
         }
+
+        public static void RuntimeError(RuntimeException error)
+        {
+            Console.WriteLine(error.Message + "\n[line " + error.Token.Line + "]");
+        }
+
         public static void Report(int line, string where, string message)
         {
             Console.WriteLine($"[line {line}] Error {where} : {message}");

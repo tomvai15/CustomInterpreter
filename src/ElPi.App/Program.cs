@@ -22,23 +22,20 @@ namespace ElPi.App
                 code = InputReader.ReadInput();
             }
 
-
             var scanner = new Scanner(code);
-
             var tokens = scanner.ScanTokens();
 
             var parser = new Parser(tokens);
-
             var expression =  parser.Parse();
 
             var printer = new AstPrinter();
+            var expressionTree = printer.Print(expression);
+            Console.WriteLine(expressionTree);
 
-            Console.WriteLine(printer.Print(expression));
+            var interpreter = new ExpressionInterpreter();
+            var result  = interpreter.Interpret(expression);
 
-            return;
-            
+            Console.WriteLine($"Result: {result}");    
         }
-
-
     }
 }
