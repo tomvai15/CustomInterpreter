@@ -35,6 +35,9 @@ namespace ElPi.App
 
             Console.WriteLine(printer.Print(expression));
 
+            var interpreter = new ExpressionInterpreter();
+
+            var result  = interpreter.Interpret(expression);
             return;
             
         }
